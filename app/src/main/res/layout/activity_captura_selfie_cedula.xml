@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CapturaSelfieCedulaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgViewEncabezado"
+        android:scaleType="fitStart"
+        android:src="@drawable/encabezado"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewEncabezado"
+        app:layout_constraintBottom_toTopOf="@+id/imgViewCiudad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgViewLogoInnovative"
+            android:src="@drawable/logo_innovative"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutId"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCaptureID"
+                style="@style/BotonSelfieId"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVCedula"
+                android:text="@string/cedula"
+                android:textSize="16sp"
+                android:textColor="@color/gris_oscuro"
+                android:textStyle="normal"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/imgViewFrontID"
+                android:layout_alignTop="@+id/imgViewFrontID"
+                android:layout_alignBottom="@+id/imgViewFrontID"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:translationZ="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVFotografia"
+                android:text="@string/cambiar_fotografia"
+                style="@style/TextViewSelfieId"
+                android:layout_below="@+id/btnCaptureID"
+                android:layout_alignLeft="@+id/btnCaptureID"
+                android:layout_alignRight="@+id/btnCaptureID"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgViewFrontID"
+                android:src="@drawable/id_gris"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:translationZ="5dp"
+                android:elevation="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutSelfie"
+            app:layout_constraintTop_toBottomOf="@+id/relLayoutId"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSelfie"
+                style="@style/BotonSelfieId"/>
+
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:id="@+id/imgViewSelfieFace"
+                android:translationZ="5dp"
+                android:layout_toRightOf="@+id/imgViewSelfie"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/btnSelfie"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:id="@+id/btnSelfieFace"
+                style="@style/BotonSelfieId"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVSelfie"
+                android:text="@string/selfie"
+                android:textSize="16sp"
+                android:textColor="@color/gris_oscuro"
+                android:textStyle="normal"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/imgViewSelfie"
+                android:layout_alignTop="@+id/imgViewSelfie"
+                android:layout_alignBottom="@+id/imgViewSelfie"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:translationZ="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVCambiarSelfie"
+                android:text="@string/cambiar_selfie"
+                style="@style/TextViewSelfieId"
+                android:layout_below="@+id/btnSelfieFace"
+                android:layout_alignLeft="@+id/btnSelfie"
+                android:layout_alignRight="@+id/btnSelfie"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgViewSelfie"
+                android:src="@drawable/selfie_gris"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="1dp"
+                android:translationZ="5dp"
+                android:elevation="5dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnValidar"
+            android:text="@string/validar"
+            style="@style/BotonesPantallas"
+            android:background="@drawable/boton_gris"
+            android:enabled="false"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/relLayoutSelfie"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgViewCiudad"
+        android:scaleType="fitEnd"
+        android:src="@drawable/fondo_ciudad"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

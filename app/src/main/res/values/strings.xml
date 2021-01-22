@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Onboarding</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="validar">Validar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="proceder">Proceder</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="corregir">Corregir</string>
+    <string name="ingrese_datos">Ingrese sus datos</string>
+    <string name="preguntas_frecuentes">Preguntas Frecuentes</string>
+    <string name="selfie">Tómese un Selfie</string>
+    <string name="cedula">Adjunte una fotografía de su cédula por ambos lados</string>
+    <string name="cambiar_fotografia">Cambiar fotografía</string>
+    <string name="cambiar_selfie">Cambiar selfie</string>
+    <string name="verificacion_biometrica">Verificación Biométrica</string>
+    <string name="realice_firma">Realice su firma</string>
+    <string name="nombre">Nombre</string>
+    <string name="fecha_expiracion">Fecha de Expiración</string>
+    <string name="nacionalidad">Nacionalidad</string>
+    <string name="fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="num_identificacion">Número de Identificación</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="datos">Datos</string>
+    <string name="validacion_correcta">Validación Correcta!</string>
+    <string name="validacion_incorrecta">Validación Incorrecta!</string>
+    <string name="accion_habilitada">Esta acción esta habilitada para su perfil.</string>
+    <string name="message_user_stopped_manually">El usuario ha detenido manualmente el proceso.</string>
+    <string name="message_timeout_error">El tiempo del proceso se ha agotado.</string>
+    <string name="message_camera_permission_error">Los permisos de cámara están desactivados.</string>
+    <string name="message_settings_permission_error">Los permisos de modificación de ajustes están desactivados.</string>
+    <string name="message_unexpected_error">Error inesperado.</string>
+</resources>

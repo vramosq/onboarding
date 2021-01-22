@@ -1,0 +1,117 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Estilo Boton color rojo, gris Pantallas-->
+    <style name="BotonesPantallas">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Estilo EditText Pantalla Login -->
+    <style name="EditTextLogin">
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:textColor">@color/negro</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">start|top</item>
+    </style>
+
+    <!--&lt;!&ndash; Estilo Boton Pantalla Selfie ID &ndash;&gt;
+    <style name="BotonSelfieId">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/gris_oscuro</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/button_selfie_id</item>
+    </style>-->
+
+    <!-- Estilo Boton Pantalla Selfie ID -->
+    <style name="BotonSelfieId">
+        <item name="android:padding">30dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/button_selfie_id</item>
+    </style>
+
+    <!-- Estilo Boton Pantalla Selfie ID -->
+    <style name="BotonSelfieIdxxx">
+        <item name="android:padding">80dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/button_selfie_id</item>
+    </style>
+
+    <!-- Estilo TextView Pantalla Selfie ID -->
+    <style name="TextViewSelfieId">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/rojo</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- Estilo Linear Layout Pantalla Validar Datos -->
+    <style name="LinearLayoutValidarDatos">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/cuadro_informacion</item>
+    </style>
+
+    <!-- Estilo EditText Pantalla Validar Datos -->
+    <style name="EditTextValidarDatos">
+        <item name="android:textColor">@color/gris_letra</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <!-- Estilo TextView Pantalla Validar Datos -->
+    <style name="TextViewValidarDatos">
+        <item name="android:textColor">@color/negro</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Estilo de los cardViews -->
+    <style name="AppTheme.CardViews" parent="CardView">
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">@color/gris_claro_fondo</item>
+        <item name="backgroundTint">@color/gris_oscuro_borde</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Estilo Linear Layout Pantalla Validar Firma -->
+    <style name="LinearLayoutValidarFirma">
+        <item name="android:background">@drawable/cuadro_informacion</item>
+    </style>
+
+</resources>

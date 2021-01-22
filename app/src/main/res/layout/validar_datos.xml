@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgViewLogoInnovative"
+        android:src="@drawable/logo_innovative"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tVVerificaBiometrica"
+        android:text="@string/verificacion_biometrica"
+        android:textColor="@color/celeste"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_gravity="center"/>
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSiguiente"
+        android:text="@string/siguiente"
+        style="@style/BotonesPantallas"
+        android:background="@drawable/boton_gris"
+        android:enabled="false"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayoutId"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgViewID"
+            android:src="@drawable/id_azul"
+            android:layout_alignParentLeft="true"/>
+
+        <com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarLoader"
+            app:loader_animDur="300"
+            app:loader_bigCircleRadius="15dp"
+            app:loader_circleRadius="3dp"
+            app:loader_defaultColor="@color/celeste"
+            app:loader_selectedColor="@color/rojo"
+            app:loader_firstShadowColor="@color/celeste"
+            app:loader_secondShadowColor="@color/colorPrimary"
+            app:loader_showRunningShadow="true"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/imgViewCheckVerificacionVerde"
+                android:src="@drawable/check_verificacion"
+                android:tint="@color/verde"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/imgViewCheckVerificacionRojo"
+                android:src="@drawable/check_verificacion"
+                android:tint="@color/rojo"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tVPorcentaje"
+                android:textSize="15dp"
+                android:textColor="@color/negro"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgViewSelfie"
+            android:src="@drawable/selfie_azul"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linLayoutId"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_gravity="center_horizontal|center_vertical">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imgViewID"
+            android:src="@drawable/id_azul"/>
+
+        <com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/progressBarLoader"
+            app:loader_animDur="300"
+            app:loader_bigCircleRadius="15dp"
+            app:loader_circleRadius="3dp"
+            app:loader_defaultColor="@color/celeste"
+            app:loader_selectedColor="@color/rojo"
+            app:loader_firstShadowColor="@color/celeste"
+            app:loader_secondShadowColor="@color/colorPrimary"
+            app:loader_showRunningShadow="true"
+            android:layout_gravity="center|center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/imgViewCheckVerificacionVerde"
+                android:src="@drawable/check_verificacion"
+                android:tint="@color/verde"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/imgViewCheckVerificacionRojo"
+                android:src="@drawable/check_verificacion"
+                android:tint="@color/rojo"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tVPorcentaje"
+                android:textSize="15dp"
+                android:textColor="@color/negro"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        &lt;!&ndash;<ProgressBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@android:style/Widget.ProgressBar.Inverse"
+            android:layout_gravity="center|center_horizontal"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminate="true"/>&ndash;&gt;
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imgViewSelfie"
+            android:src="@drawable/selfie_azul"/>
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayoutSelfie"
+        android:orientation="vertical"
+        style="@style/LinearLayoutValidarDatos">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVDatos"
+            android:text="@string/datos"
+            android:textColor="@color/celeste"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVNombre"
+            android:text="@string/nombre"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTNombre"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVFechaExpiracion"
+            android:text="@string/fecha_expiracion"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTFechaExpiracion"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVFechaNacimiento"
+            android:text="@string/fecha_nacimiento"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTFechaNacimiento"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVApellidos"
+            android:text="@string/apellidos"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTApellidos"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVNacionalidad"
+            android:text="@string/nacionalidad"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTNacionalidad"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVNumIdentificacion"
+            android:text="@string/num_identificacion"
+            style="@style/TextViewValidarDatos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eTNumIdentificacion"
+            style="@style/EditTextValidarDatos"
+            android:backgroundTint="@color/gris_oscuro_borde"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSiguiente"
+            android:text="@string/siguiente"
+            style="@style/BotonesPantallas"
+            android:background="@drawable/boton_gris"
+            android:enabled="false"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    &lt;!&ndash;<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgViewEncabezado"
+        android:scaleType="fitStart"
+        android:src="@drawable/encabezado"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"/>&ndash;&gt;
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgViewLogoInnovative"
+            android:src="@drawable/logo_innovative"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVVerificaBiometrica"
+            android:text="@string/verificacion_biometrica"
+            android:textColor="@color/celeste"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative"/>
+
+        &lt;!&ndash;<com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            app:loader_animDur="100"
+            app:loader_bigCircleRadius="42dp"
+            app:loader_circleRadius="14dp"
+            app:loader_defaultColor="@color/celeste"
+            app:loader_firstShadowColor="@color/rojo"
+            app:loader_secondShadowColor="@color/blanco"
+            app:loader_selectedColor="@color/negro"
+            app:loader_showRunningShadow="true"
+            app:layout_constraintTop_toBottomOf="@+id/tVVerificaBiometrica"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative"/>
+&ndash;&gt;
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linLayoutId"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tVVerificaBiometrica"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/imgViewID"
+                android:src="@drawable/id_azul"/>
+
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_gravity="center|center_horizontal"
+                android:indeterminateTint="@color/colorPrimary"
+                android:indeterminate="true"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/imgViewSelfie"
+                android:src="@drawable/selfie_azul"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutSelfie"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linLayoutId"
+            app:layout_constraintLeft_toLeftOf="@+id/imgViewLogoInnovative"
+            app:layout_constraintRight_toRightOf="@+id/imgViewLogoInnovative"
+            style="@style/LinearLayoutValidarDatos">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVDatos"
+                android:text="@string/datos"
+                android:textColor="@color/celeste"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVNombre"
+                android:text="@string/nombre"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTNombre"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVFechaExpiracion"
+                android:text="@string/fecha_expiracion"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTFechaExpiracion"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVFechaNacimiento"
+                android:text="@string/fecha_nacimiento"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTFechaNacimiento"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVApellidos"
+                android:text="@string/apellidos"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTApellidos"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVNacionalidad"
+                android:text="@string/nacionalidad"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTNacionalidad"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tVNumIdentificacion"
+                android:text="@string/num_identificacion"
+                style="@style/TextViewValidarDatos"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eTNumIdentificacion"
+                style="@style/EditTextValidarDatos"
+                android:backgroundTint="@color/gris_oscuro_borde"/>
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnSiguiente"
+                android:text="@string/siguiente"
+                style="@style/BotonesPantallas"
+                android:background="@drawable/boton_rojo"
+                android:enabled="true"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->
